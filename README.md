@@ -16,7 +16,7 @@
 
 ```bash
 
-git clone <repository-url># 
+git clone https://github.com/adreamer1074/fmtshift.git
 cd fmtshift
 pip install -r requirements.txt
 ```

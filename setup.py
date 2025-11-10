@@ -6,7 +6,7 @@ setup(
     description='フォーマット変換ツール',
     author='',
     author_email='',
-    url='',
+    url='https://github.com/adreamer1074/fmtshift.git',
     
     # パッケージ構成
     packages=find_packages(),  # converters, parsers, writers を自動検出
