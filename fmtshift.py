@@ -15,11 +15,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from converters.converter import FormatConverter
 
+# バージョン情報 (ルートの__init__.pyと同期)
+__version__ = '0.2'
+
 
 def main():
     """CLIエントリーポイント"""
     parser = argparse.ArgumentParser(
-        description='fmtshift - 複数フォーマット変換ツール (v2.0)',
+        description=f'fmtshift - 複数フォーマット変換ツール (v{__version__})',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 使用例:
@@ -42,7 +45,7 @@ def main():
     parser.add_argument('-t', '--to', dest='to_file', required=True,
                         help='変換先ファイル')
     parser.add_argument('-v', '--version', action='version', 
-                        version='fmtshift 2.0.0')
+                        version=f'fmtshift {__version__}')
     
     args = parser.parse_args()
     

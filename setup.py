@@ -1,8 +1,18 @@
 from setuptools import setup, find_packages
+import os
+
+# __init__.pyからバージョンを読み込む
+here = os.path.abspath(os.path.dirname(__file__))
+about = {}
+with open(os.path.join(here, '__init__.py'), 'r', encoding='utf-8') as f:
+    for line in f:
+        if line.startswith('__version__'):
+            exec(line, about)
+            break
 
 setup(
     name='fmtshift',
-    version='0.2',
+    version=about['__version__'],
     description='フォーマット変換ツール',
     author='',
     author_email='',
